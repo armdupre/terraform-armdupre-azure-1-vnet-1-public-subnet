@@ -10,7 +10,7 @@ variable "PrivateSubnetPrefix" {
 }
 
 variable "PublicSecurityRuleSourceIpPrefix" {
-	description = "IP Addresse /32 or IP CIDR range connecting inbound to App"
+	description = "IP Address /32 or IP CIDR range connecting inbound to App"
 	type = string
 }
 
