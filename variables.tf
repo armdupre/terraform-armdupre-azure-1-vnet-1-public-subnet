@@ -1,5 +1,6 @@
 variable "AppTag" {
-	description = "Designation for set of resources available to App VM"
+	default = "example"
+	description = "App ID tag of application using the deployment"
 	type = string
 }
 
@@ -32,18 +33,20 @@ variable "ResourceGroupName" {
 }
 
 variable "UserEmailTag" {
-	description = "Email address tag of user creating the stack"
+	default = "terraform@example.com"
+	description = "Email address tag of user creating the deployment"
 	type = string
 }
 
 variable "UserLoginTag" {
-	description = "Login ID tag of user creating the stack"
+	default = "terraform"
+	description = "Login ID tag of user creating the deployment"
 	type = string
 }
 
 variable "UserProjectTag" {
 	default = "CLOUD_IST"
-	description = "Project tag of user creating the stack"
+	description = "Project tag of user creating the deployment"
 	type = string
 }
 
