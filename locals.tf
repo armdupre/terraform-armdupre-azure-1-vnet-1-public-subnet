@@ -2,19 +2,19 @@ locals {
 	AppTag = var.AppTag
 	ResourceGroupLocation = var.ResourceGroupLocation
 	ResourceGroupName = var.ResourceGroupName
-	PrivateNetworkSecurityGroupName = "${local.UserLoginTag}_${local.AppTag}_PRIVATE_NETWORK_SECURITY_GROUP"
-	PrivateSubnetName = "${local.UserLoginTag}_${local.AppTag}_VNET_PRIVATE_SUBNET"
+	PrivateNetworkSecurityGroupName = "${local.UserLoginTag}-${local.AppTag}-private-network-security-group"
+	PrivateSubnetName = "${local.UserLoginTag}-${local.AppTag}-vnet-private-subnet"
 	PrivateSubnetPrefix = var.PrivateSubnetPrefix
-	PublicHttpSecurityRuleName = "${local.UserLoginTag}_${local.AppTag}_WEB_RULE"
-	PublicHttpsSecurityRuleName = "${local.UserLoginTag}_${local.AppTag}_HTTPS_RULE"
-	PublicNetworkSecurityGroupName = "${local.UserLoginTag}_${local.AppTag}_NETWORK_SECURITY_GROUP"
+	PublicHttpSecurityRuleName = "${local.UserLoginTag}-${local.AppTag}-web-rule"
+	PublicHttpsSecurityRuleName = "${local.UserLoginTag}-${local.AppTag}-https-rule"
+	PublicNetworkSecurityGroupName = "${local.UserLoginTag}-${local.AppTag}-network-security-group"
 	PublicSecurityRuleSourceIpPrefix = var.PublicSecurityRuleSourceIpPrefix
-	PublicSshSecurityRuleName = "${local.UserLoginTag}_${local.AppTag}_SSH_RULE"
-	PublicSubnetName = "${local.UserLoginTag}_${local.AppTag}_VNET_PUBLIC_SUBNET"
+	PublicSshSecurityRuleName = "${local.UserLoginTag}-${local.AppTag}-ssh-rule"
+	PublicSubnetName = "${local.UserLoginTag}-${local.AppTag}-vnet-public-subnet"
 	PublicSubnetPrefix = var.PublicSubnetPrefix
 	UserEmailTag = var.UserEmailTag
 	UserLoginTag = var.UserLoginTag
 	UserProjectTag = var.UserProjectTag
 	VnetAddressPrefix = var.VnetAddressPrefix
-	VnetName = "${local.UserLoginTag}_${local.AppTag}_VNET"
+	VnetName = "${local.UserLoginTag}-${local.AppTag}-vnet"
 }
