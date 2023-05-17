@@ -9,13 +9,13 @@ This module creates a topology with a single virtual network having a single pub
 ## Usage
 ```tf
 module "vnet" {
-	source = "armdupre/azure-1-vnet-1-public-subnet/azurerm"
-	ResourceGroupName = azurerm_resource_group.ResourceGroup.name
-	PublicSecurityRuleSourceIpPrefix = "1.1.1.1/32"
+    source = "armdupre/azure-1-vnet-1-public-subnet/azurerm"
+    PublicSecurityRuleSourceIpPrefix = "1.1.1.1/32"
+    ResourceGroupName = azurerm_resource_group.ResourceGroup.name
 }
 
 resource "azurerm_resource_group" "ResourceGroup" {
-	name = "azure-1-vnet-1-public-subnet"
-	location = "East US"
+    location = "East US"
+    name = "azure-1-vnet-1-public-subnet"
 }
 ```
