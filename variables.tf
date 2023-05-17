@@ -45,7 +45,7 @@ variable "UserLoginTag" {
 }
 
 variable "UserProjectTag" {
-	default = "CLOUD_IST"
+	default = "module"
 	description = "Project tag of user creating the deployment"
 	type = string
 }
