@@ -1,4 +1,4 @@
-# azure-1-vnet-1-public-subnet
+# module-1-vnet-1-public-subnet/azurerm
 
 ## Description
 Terraform module for Vnet deployment on Microsoft Azure
