@@ -1,6 +1,6 @@
 locals {
 	InstanceId = var.InstanceId
-	Preamble = "${local.UserLoginTag}-${local.Tag}-${local.InstanceId}"
+	Preamble = "${local.UserLoginTag}-${local.Tag}-${local.Version}-${local.InstanceId}"
 	PublicHttpSecurityRuleName = "${local.Preamble}-http-rule"
 	PublicHttpsSecurityRuleName = "${local.Preamble}-https-rule"
 	PublicNetworkSecurityGroupName = "${local.Preamble}-public-nsg"
@@ -14,6 +14,7 @@ locals {
 	UserEmailTag = var.UserEmailTag
 	UserLoginTag = var.UserLoginTag
 	UserProjectTag = var.UserProjectTag
+	Version = var.Version
 	VnetAddressPrefix = var.VnetAddressPrefix
 	VnetName = "${local.Preamble}-vnet"
 }
