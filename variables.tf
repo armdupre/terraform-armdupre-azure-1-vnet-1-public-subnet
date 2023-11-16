@@ -1,5 +1,6 @@
 variable "InstanceId" {
 	default = "vnet"
+	description = "Id of the instance of this module that ensures uniqueness"
 	type = string
 }
 
@@ -47,6 +48,10 @@ variable "UserLoginTag" {
 	default = "terraform"
 	description = "Login ID tag of user creating the deployment"
 	type = string
+	validation {
+		condition = length(var.UserLoginTag) >= 4
+		error_message = "UserLoginTag minimum length must be >= 4."
+	}
 }
 
 variable "UserProjectTag" {
